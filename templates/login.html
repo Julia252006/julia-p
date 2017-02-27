@@ -5,32 +5,30 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
 
 <style>
 
 h1 {
     height: 50px;
     background: linear-gradient(to bottom right, grey, white);
+    text-decoration: underline;
+    text-color: black;
 }
 body {
-    background-color: grey;
-
+    background-color: lightgrey;
 }
 
 </style>
-
+<div class="container">
     <h1>Welcome</h1>
    <p>
-        <h3>You can log in here!<h3>
+        You can log in here!
     </p>
-
-    <label><b>Login</b></label>
-    <input type="text" placeholder="Enter Login" name="login" required>
-
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-
-    <input type="checkbox" checked="checked"> Remember me
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
 </div>
 {% endblock %}

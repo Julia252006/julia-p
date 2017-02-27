@@ -1,25 +1,33 @@
 {% extends 'view_template.html' %}
 
 {% block content %}
-<div class="container">
-
 <style>
 
 h1 {
     height: 50px;
     background: linear-gradient(to bottom right, grey, white);
+    text-decoration: underline;
+}
+
+body {
+    background-color: lightgrey;
+
 }
 </style>
 
+<div class="container">
+
     <h1>Details</h1>
-    <p>Username: {{ user }}</p>
-    <p>First name: {{ user.first_name }}</p>
-    <p>Last name: {{ user.last_name }}</p>
-    <p>Email: {{ user.email }}</p>
-    <p>Description: {{ user.userprofile.description }}</p>
-    <p>Phone: {{ user.userprofile.phone }}</p>
-    <p>City: {{ user.userprofile.city }}</p>
-    <p>Website: {{ user.userprofile.website }}</p>
+   <ul style="list-style-type:square">
+    <li>Username: {{ user }}</li>
+    <li>First name: {{ user.first_name }}</li>
+    <li>Last name: {{ user.last_name }}</li>
+    <li>Email: {{ user.email }}</li>
+    <li>Description: {{ user.userprofile.description }}</li>
+    <li>Phone: {{ user.userprofile.phone }}</li>
+    <li>City: {{ user.userprofile.city }}</li>
+    <li>Website: {{ user.userprofile.website }}</li>
+   </ul>
     <img src="{{ user.userprofile.image.url }}" width="240">
 </div>
 

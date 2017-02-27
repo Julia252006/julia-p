@@ -4,6 +4,7 @@ body {
     background-color: grey(150, 250, 180);
     color: grey(100, 120, 150);
     text-align: center;
+    background-image: url(static_images_hydra_world.png);
 
 }
 
@@ -20,15 +21,15 @@ button {
     transition-duration: 0.4s;
 }
 
-button: lime {
+button: black {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 255, 0.3),0 17px 50px 0 rgba(0, 0, 255, 0.3);
 
 }
 
 .hello {
-    color: aqua;
     text-shadow: 4px 4px 8px black;
     font-size: 400%;
+    color: aqua;
 }
 
 input[type=text], input[type=password], select {
