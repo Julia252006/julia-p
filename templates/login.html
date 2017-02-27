@@ -1,0 +1,36 @@
+{% extends 'view_template.html' %}
+
+{% block header %}
+    <title>Login Page</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+<style>
+
+h1 {
+    height: 50px;
+    background: linear-gradient(to bottom right, grey, white);
+}
+body {
+    background-color: grey;
+
+}
+
+</style>
+
+    <h1>Welcome</h1>
+   <p>
+        <h3>You can log in here!<h3>
+    </p>
+
+    <label><b>Login</b></label>
+    <input type="text" placeholder="Enter Login" name="login" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <input type="checkbox" checked="checked"> Remember me
+</div>
+{% endblock %}

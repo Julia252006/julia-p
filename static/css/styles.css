@@ -1,0 +1,40 @@
+
+body {
+
+    background-color: grey(150, 250, 180);
+    color: grey(100, 120, 150);
+    text-align: center;
+
+}
+
+button {
+    background-color: aqua;
+    color: blue(80, 80, 80);
+
+    margin-left: 20%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button: lime {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 255, 0.3),0 17px 50px 0 rgba(0, 0, 255, 0.3);
+
+}
+
+.hello {
+    color: aqua;
+    text-shadow: 4px 4px 8px black;
+    font-size: 400%;
+}
+
+input[type=text], input[type=password], select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+

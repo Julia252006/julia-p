@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block header %}
+    <title>Shared Temples Page</title>
+    {% endblock %}
+
+    {% load static %}
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <link rel="icon" href="{% static "icon/hydra_world.png" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                <img src="{% static "images/hydra_world.png" %}" style="width: 5vw; height: 5vw; margin-top: -1.5vw;">
+            </a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/home">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/details">Details</a></li>
+            <li><a href="/details/edit">Edit</a></li>
+            <li><a href="/details/change_password">Change Password</a></li>
+        </ul>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static "scripts/script.js" %}"></script>
+</body>
+</html>

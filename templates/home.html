@@ -1,0 +1,24 @@
+{% extends "view_template.html" %}
+
+{% block header %}
+    <title>Home Page</title>
+{% endblock %}
+
+{% block content %}
+<style>
+
+.hello {
+    height: 100px;
+    background: linear-gradient(to bottom right, grey, white);
+}
+body {
+    background-color: grey;
+    background-image: url(images_hydra_world.png) right bottom no-repeat;
+
+}
+</style>
+<body>
+<div id="grad1"></div>
+<div class="hello">Hello Django!</div>
+</body>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'view_template.html' %}
+
+{% block header %}
+    <title>Logout Page</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Logged out</h1>
+    <p>
+        You have logged out!
+    </p>
+     <h1>Log in</h1>
+   <input type=button onClick="location.href='/login/'" value="Log in">
+</div>
+{% endblock %}
