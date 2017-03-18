@@ -19,11 +19,17 @@ body {
 }
 
 </style>
+
 <div class="container">
     <h1>Welcome</h1>
    <p>
-        You can log in here!
+       write your login here!
     </p>
+    {% if anon_error %}
+    <div>
+        {{ anon_error }}
+    </div>
+    {% endif %}
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}

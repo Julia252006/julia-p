@@ -1,6 +1,7 @@
 from details.forms import EditProfileForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
+from django.core.urlresolvers import reverse
 
 
 def view_details(request):
@@ -16,9 +17,11 @@ def edit_details(request):
             form.save()
             return redirect('/details')
     else:
-        form = EditProfileForm(instance=request.user)
-        args = {'form': form}
-        return render(request, 'edit_details.html', args)
+        if not request.user.is_anonymous():
+            form = EditProfileForm(instance=request.user)
+            args = {'form': form}
+            return render(request, 'edit_details.html', args)
+        return redirect("/login")
 
 
 def change_password(request):
@@ -32,6 +35,5 @@ def change_password(request):
             return redirect('/details')
     else:
         form = PasswordChangeForm(user=request.user)
-
         args = {'form': form}
         return render(request, 'change_password.html', args)

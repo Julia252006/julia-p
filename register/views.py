@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 
@@ -8,6 +9,7 @@ def register(request):
         if form.is_valid():
             form.save()
             return redirect('/home')
+        return HttpResponse(str(form.errors))
     else:
         form = UserCreationForm()
 
