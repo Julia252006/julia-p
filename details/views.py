@@ -1,7 +1,7 @@
-from details.forms import EditProfileForm
-from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
-from django.core.urlresolvers import reverse
+from django.shortcuts import render, redirect
+
+from details.forms import EditProfileForm
 
 
 def view_details(request):
