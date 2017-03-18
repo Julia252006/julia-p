@@ -1,7 +1,7 @@
 {% extends 'view_template.html' %}
 
 {% block header %}
-    <title>Login Page</title>
+<title>Login Page</title>
 {% endblock %}
 
 {% block content %}
@@ -16,18 +16,33 @@ h1 {
 }
 body {
     background-color: lightgrey;
+    background-image: url(/static/images/logo.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+
+    height: 100%;
+}
+#bgnd {
+    background-image: url(/static/images/logo.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    height: 100%;
 }
 
 </style>
 
 <div class="container">
+    <div id="bgnd"></div>
     <h1>Welcome</h1>
-   <p>
-       write your login here!
-    </p>
     {% if anon_error %}
     <div>
-        {{ anon_error }}
+        <p>
+            {{ anon_error }}
+        </p>
     </div>
     {% endif %}
     <h2>Login</h2>
